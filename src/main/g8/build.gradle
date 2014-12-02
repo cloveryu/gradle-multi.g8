@@ -1,0 +1,21 @@
+allprojects {
+    apply plugin: 'idea'
+    apply plugin: 'java'
+}
+
+subprojects {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compile(
+            'com.google.guava:guava:18.0'
+        )
+
+        testCompile(
+            'junit:junit:4.11',
+            'org.mockito:mockito-all:1.10.8'
+        )
+    }
+}
